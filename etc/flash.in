@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e # Exit on error
+CMD="avrdude -p @MCU@ -c ${PROG}"
+echo ":: Flashing firmware..."
+$CMD -U flash:w:main.hex:i
